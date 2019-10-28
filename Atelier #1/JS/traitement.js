@@ -1,103 +1,116 @@
-var transformerLivreKg;{
-transformerLivreKg=prompt("entrer votre poid en livre");
+function transformerLivreKg()
+{
+    var livre;
+    livre=prompt("entrer votre poid en livre");
 
-transformerLivreKg=transformerLivreKg/2.2;
+    livre=livre/2.2;
 
-console.log("votre poid en Kilogramme est de"+ transformerLivreKg + "Kg");
+    console.log("votre poid en Kilogramme est de"+ livre + "Kg");
 }
 
-var traiterTaux;{
-traiterTaux =prompt("entrer le montant d'argent canadien");
+function traiterTaux()
+{
+    var taux;
+    taux =prompt("entrer le montant d'argent canadien");
 
-traiterTaux = traiterTaux/1.45 ;
+    taux = traiterTaux/1.45 ;
 
 console.log("vous avez "+ traiterTaux + "euros");
 }
 
-var calculerArgent;{
+function calculerArgent()
+{
     var unSous;
     var cinqSous;
     var dixSous;
     var vingtcinqSous;
+    var calcule;
 
     unSous =prompt("entrer le nombre de billet de 1 sous");
     cinqSous =prompt("entrer le nombre de billet de 5 sous");
     dixSous =prompt("entrer le nombre de billet de 10 sous");
     vingtcinqSous =prompt("entrer le nombre de billet de 25 sous");
 
-    calculerArgent= unSous+(cinqSous*5)+(dixSous*10)+(vingtcinqSous*25);
+    calcule = unSous+(cinqSous*5)+(dixSous*10)+(vingtcinqSous*25);
 
-    console.log("vous avez "+ calculerArgent + "dollors canadien tire");
-
-}
-
-var entrerNip;{
-
-   entrerNip = prompt("entrer votre NIP");
-
-   if(entrerNip=1234)
-   {
-       console.log("transaction effectuée avec succeès");
-   }
-   else
-   {
-       console.log("transaction refusé");
-   }
+    console.log("vous avez "+ calcule + "dollors canadien tire");
 
 }
 
-var calculerGallons;{
+function entrerNip(){
 
+    var nip;
+
+    nip = prompt("entrer votre NIP");
+
+    if(nip=1234)
+    {
+        console.log("transaction effectuée avec succeès");
+    }
+    else
+    {
+        console.log("transaction refusé");
+    }
+
+}
+
+function calculerGallons()
+{
+    var nombreGallons;
     var typeGallons;
 
-    calculerGallons= prompt(" entrer combien de litres voulez vous transformer en gallons  ");
+    nombreGallons= prompt(" entrer combien de litres voulez vous transformer en gallons  ");
 
     typeGallons= prompt("appuyer sur 1 si vous voulez transformer des gallons américain ou appuyer sur 2 pour des gallons impériaux");
 
     if(typeGallons=1)
     {
-        calculerGallons= calculerGallons*0.264172 ;
-        console.log("vous avez "+calculerGallons + "gallons dans le nombre de litre demender");
+        nombreGallons= nombreGallons*0.264172 ;
+        console.log("vous avez "+nombreGallons + "gallons dans le nombre de litre demender");
     }
 
-    if(typeGallons=2)
+    else
     {
-        calculerGallons= calculerGallons*0.219969 ;
-        console.log("vous avez "+calculerGallons + "gallons dans le nombre de litre demender");
+        nombreGallons= nombreGallons*0.219969 ;
+        console.log("vous avez "+nombreGallons + "gallons dans le nombre de litre demender");
     }
 }
-var calculerPrixGarderie;{
+function calculerPrixGarderie()
+{
 
     var Animal;
+    var prixGarderie;
 
    animal = prompt("appuyer sur 1 si vous voulez faire garder un chien ou appuyer sur 2 pour faire garder un chat");
 
-   calculerPrixGarderie= prompt("entrer le nombre de jour que vous voulez faire garder votre animal")
+   prixGarderie= prompt("entrer le nombre de jour que vous voulez faire garder votre animal")
 
     if(animal=1)
     {
-        calculerPrixGarderie=18.5*calculerPrixGarderie;
-        console.log("le prix du gardiennage est de "+calculerPrixGarderie + "$");
+        prixGarderie=18.5*prixGarderie;
+        console.log("le prix du gardiennage est de "+prixGarderie + "$");
     }
 
-    if(animal=2)
+    else
     {
-        calculerPrixGarderie=16.95*calculerPrixGarderie;
-        console.log("le prix du gardiennage est de "+calculerPrixGarderie + "$");
+        prixGarderie=16.95*prixGarderie;
+        console.log("le prix du gardiennage est de "+prixGarderie + "$");
     }
 
 }
- var calculerMontant;{
+ function calculerMontant()
+ {
      var ageEnfant;
      var ageVieux;
      var etudiant;
      var nombreBillet;
      var aucun;
      var prixTotal;
+     var montant;
 
      nombreBillet= prompt(" combien de billet excluant les billet d'enfant de 5 ans et moins ?  ");
      ageEnfant = prompt("combien de billet avez vous besoin pour les enfant agé de 5 ans et moins? ");
-     agevVieux = prompt("combien de billet avez vous besoin pour les personne agé de 65 ans et plus? ");
+     ageVieux = prompt("combien de billet avez vous besoin pour les personne agé de 65 ans et plus? ");
      aucun = prompt("combien de billet avez vous besoin pour les personne appartennant a aucune de ces catégories?");
      etudiant = prompt(" combien de billet sont pour des étudiant?  ");
 
