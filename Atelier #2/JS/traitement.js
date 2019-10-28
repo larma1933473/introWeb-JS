@@ -78,3 +78,14 @@ function calculeDegat(degat)
         }
         return degat;
 }
+function calculeQts()
+{
+    var tabquestion = new Array("question#1? a/b/c,question#2? a/b/c,question#3? a/b/c,question#1? a/b/c,question#4? a/b/c,question#5? a/b/c");
+    var tabBon = new Array("a","c","b","a","b");
+
+     for(var i=0; i<tabquestion:i++)
+    {
+        tabquestion=prompt(i=1);
+
+    }
+}
