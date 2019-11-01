@@ -83,35 +83,16 @@ function calculeQts()
     var tabquestion = new Array("question#1? a/b/c,question#2? a/b/c,question#3? a/b/c,question#1? a/b/c,question#4? a/b/c,question#5? a/b/c");
     var tabBon = new Array("a","c","b","a","b");
     var point;
+    var reponse;
 
-     for(var i=0; i<tabquestion;i++)
+     for(var i=0; i<5;i++)
      {
-        tabquestion=prompt("tabquestion[0]");
-        if(tabquestion[0] = tabBon[0])
-        {
-            point=point+1;
-        }
-        tabquestion=prompt("tabquestion[1]");
-        if(tabquestion[1] = tabBon[1])
-        {
-            point=point+1;
-        }
-        tabquestion=prompt("tabquestion[2]");
-        if(tabquestion[2] = tabBon[2])
-        {
-            point=point+1;
-        }
-        tabquestion=prompt("tabquestion[0]");
-        if(tabquestion[2] = tabBon[2])
-        {
-            point=point+1;
-        }
-        tabquestion=prompt("tabquestion[0]");
-        if(tabquestion[2] = tabBon[2])
+        reponse=prompt(tabquestion[i],"");
+        if(tabquestion[i] = tabBon[i])
         {
             point=point+1;
         }
 
-        return point;
      }
+    return point;
 }
