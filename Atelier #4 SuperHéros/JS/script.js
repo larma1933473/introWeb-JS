@@ -20,6 +20,7 @@ function activerBtn_onclick  ()
     {
         document.querySelector( "#imgHero" +i).disabled = false;
     }
+
 }
 function memeImage_onclick  ()
 {
