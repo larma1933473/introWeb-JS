@@ -1,7 +1,7 @@
 
 //soit anto2977 soit lilo2977
-var cpt=0,nombreCarte1=0;
-
+var cpt=0;
+var nombreCarte1=0;
 var couleurCarte1=0;
 var nombreCarte=0;
 var couleurCarte=0;
@@ -10,6 +10,7 @@ var partie=0;
 
 function img_onclick(noImage)
 {
+
     afficherCarte(noImage);
     cpt=cpt+1;
 
@@ -31,6 +32,7 @@ function btnContinuer_onclick()
         activeCarte();
         remetCarte();
         afficherPoint();
+        cpt=0;
 
 }
 function afficherCarte(noImage)
@@ -107,6 +109,7 @@ function calculerPointage()
 }
 function afficherPoint()
 {
+
     document.querySelector("#lblPtsTour").innerHTML = "0";
     document.querySelector("#lblPtsTot").innerHTML = total;
 }
