@@ -1,4 +1,4 @@
-var tabReponseUsager = new Array('A','A','A','A','A');
+
 var point=0;
 
 function btnCorriger_onclick()
@@ -10,14 +10,14 @@ function btnCorriger_onclick()
 }
 function calculePointage ()
 {
-    tabReponseUsager = document.querySelectorAll(".lstQts");
 
     var tabBon = new Array("A","C","B","A","B");
 
+    tabReponseUsager = document.querySelectorAll(".lstQts");
 
     for(var i=0;i<tabBon.length;i++)
     {
-        if(tabReponseUsager[i] == tabBon[i])
+        if(tabReponseUsager[i].value == tabBon[i])
         {
             point=point+20;
         }
