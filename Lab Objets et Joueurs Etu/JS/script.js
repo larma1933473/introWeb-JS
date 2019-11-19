@@ -56,12 +56,18 @@ function btnTrouverMoy_onclick()
 
 function btnTrouverMeilleur_onclick()
 {
-    grandNombre=0;
+    var grandNombre=tabJoueur[0].pointJoueur;
+    var meilleurNom=tabJoueur[0].nomJoueur;
 
-	for(var i=0;i<tabJoueur.length;i++)
+	for(var i=1;i<tabJoueur.length;i++)
     {
-
+        if(grandNombre<tabJoueur[i].pointJoueur)
+        {
+            grandNombre=tabJoueur[i].pointJoueur;
+            meilleurNom=tabJoueur[i].nomJoueur;
+        }
     }
+    document.querySelector("#Reponse").innerHTML=" le meilleur pointage est celui de "+meilleurNom+" avec "+grandNombre+" points ";
 }
 function btnRechercher_onclick()
 {
