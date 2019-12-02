@@ -2,29 +2,61 @@ function valideFormat()
 {
     var valide=true;
 
-    if(ValideNom(document.querySelector("#txtNbre1").value)==false)
+    if(ValideNom(document.querySelector("#txtNom").value)==false)
     {
         valide=false;
-        document.querySelector("#txtNbre1").style.backgroundColor = "red";
+        document.getElementById("txtNom").style.borderColor = "red"
     }
     else
-        document.querySelector("#txtNbre1").style.backgroundColor = "white";
+        document.getElementById("txtNom").style.borderColor = "";
 
-    if(valideNo(document.querySelector("#txtNbre2").value)==false)
+    if(ValideNom(document.querySelector("#txtPrenom").value)==false)
     {
         valide=false;
-        document.querySelector("#txtNbre2").style.backgroundColor = "red";
+        document.getElementById("txtPrenom").style.borderColor = "red"
     }
     else
-        document.querySelector("#txtNbre2").style.backgroundColor = "white";
+        document.getElementById("txtPrenom").style.borderColor = "";
 
-    if(valideSymbole(document.querySelector("#txtOperateur").value)==false)
+    if(ValideAdresse(document.querySelector("#txtAdresse").value)==false)
     {
         valide=false;
-        document.querySelector("#txtOperateur").style.backgroundColor = "red";
+        document.getElementById("txtAdresse").style.borderColor = "red"
     }
     else
-        document.querySelector("#txtOperateur").style.backgroundColor = "white";
+        document.getElementById("txtAdresse").style.borderColor = "";
+
+    if(ValideNom(document.querySelector("#txtVille").value)==false)
+    {
+        valide=false;
+        document.getElementById("txtVille").style.borderColor = "red"
+    }
+    else
+        document.getElementById("txtVille").style.borderColor = "";
+
+    if(ValideTel(document.querySelector("#txtTel").value)==false)
+    {
+        valide=false;
+        document.getElementById("txtTel").style.borderColor = "red"
+    }
+    else
+        document.getElementById("txtTel").style.borderColor = "";
+
+    if(ValidePoste(document.querySelector("#txtTel").value)==false)
+    {
+        valide=false;
+        document.getElementById("txtTel").style.borderColor = "red"
+    }
+    else
+        document.getElementById("txtTel").style.borderColor = "";
+
+    if(ValideCodePerm(document.querySelector("#txtTel").value)==false)
+    {
+        valide=false;
+        document.getElementById("txtTel").style.borderColor = "red"
+    }
+    else
+        document.getElementById("txtTel").style.borderColor = "";
 
 
     return valide;
@@ -44,4 +76,8 @@ function ValidePoste(Chaine)
 function ValideCodePerm(Chaine)
 {
     return /^[A-z]{4}[0-9]{8}$/.test(Chaine);
+}
+function ValideAdresse(Chaine)
+{
+    return /^[0-9]{4}([A-z]|[À-ë])+$/.test(Chaine);
 }

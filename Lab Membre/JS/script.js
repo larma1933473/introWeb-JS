@@ -1,16 +1,34 @@
-function frmMembre_onclick()
+function frmMembre_onsubmit()
 {
- 
+    var prixPersonne;
+    var message;
 
+ if(validerChampsObligatoire()==true)
+ {
+
+     if(valideFormat()==true)
+     {
+      prixPersonne= traiterPrix();
+
+      if(confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ")==true)
+      {
+
+      }
+     }
+ }
+ else
+ {
+     document.querySelector("#lblMessageErreur").innerHTML="tout les champ ayant des étoiles sont obligatoire ";
+ }
 }
 function validerChampsObligatoire()
 {
 var valide=true;
-var tabValideOblig=document.querySelectorAll(".Obligatoire").value;
+var tabValideOblig=document.querySelectorAll(".Obligatoire");
 
-for(var i=0;i<tabValideOblig.Length;i++)
+for(var i=0;i<tabValideOblig.length;i++)
 {
-    if(tabValideOblig[i]=="")
+    if(tabValideOblig[i].value=="")
     {
         valide=false;
     }
@@ -20,5 +38,14 @@ for(var i=0;i<tabValideOblig.Length;i++)
 
 function traitePrix()
 {
-	
+    var prixTypePersonne =document.querySelector("#type").value;
+    var prix=90;
+
+    switch(prixTypePersonne)
+    {
+        case "adulte":prix=90;break;
+        case "étudiant":prix=60;break;
+        case "retraité":prix=80;break;
+    }
+    return prix;
 }
