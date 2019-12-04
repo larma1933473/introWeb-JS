@@ -1,7 +1,7 @@
 function frmMembre_onsubmit()
 {
     var prixPersonne;
-    var message;
+    var valide=false;
 
  if(validerChampsObligatoire()==true)
  {
@@ -19,7 +19,9 @@ function frmMembre_onsubmit()
  else
  {
      document.querySelector("#lblMessageErreur").innerHTML="tout les champ ayant des étoiles sont obligatoire ";
+     valide=false;
  }
+ return valide;
 }
 function validerChampsObligatoire()
 {

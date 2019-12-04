@@ -42,21 +42,21 @@ function valideFormat()
     else
         document.getElementById("txtTel").style.borderColor = "";
 
-    if(ValidePoste(document.querySelector("#txtTel").value)==false)
+    if(ValidePoste(document.querySelector("#txtCodePostal").value)==false)
     {
         valide=false;
-        document.getElementById("txtTel").style.borderColor = "red"
+        document.getElementById("txtCodePostal").style.borderColor = "red"
     }
     else
-        document.getElementById("txtTel").style.borderColor = "";
+        document.getElementById("txtCodePostal").style.borderColor = "";
 
-    if(ValideCodePerm(document.querySelector("#txtTel").value)==false)
+    if(ValideCodePerm(document.querySelector("#txtCodePerm").value)==false)
     {
         valide=false;
-        document.getElementById("txtTel").style.borderColor = "red"
+        document.getElementById("txtCodePerm").style.borderColor = "red"
     }
     else
-        document.getElementById("txtTel").style.borderColor = "";
+        document.getElementById("txtCodePerm").style.borderColor = "";
 
 
     return valide;
@@ -71,7 +71,7 @@ function ValideTel(Chaine)
 }
 function ValidePoste(Chaine)
 {
-    return /^[A-z]\d[A-z] [A-z]\d[A-z]$/.test(Chainee);
+    return /^([A-z]\d[A-z] [A-z]\d[A-z]|^$)$/.test(Chainee);
 }
 function ValideCodePerm(Chaine)
 {
