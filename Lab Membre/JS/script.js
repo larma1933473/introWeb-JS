@@ -1,27 +1,28 @@
 function frmMembre_onsubmit()
 {
     var prixPersonne;
-    var valide=false;
+    var valideFormulaire=true;
+    var confirmation=confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ");
 
  if(validerChampsObligatoire()==true)
  {
+     prixPersonne= traiterPrix();
 
      if(valideFormat()==true)
      {
-      prixPersonne= traiterPrix();
 
-      if(confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ")==true)
+      if(confirmation==false)
       {
-
+            valideFormulaire=false;
       }
      }
  }
  else
  {
      document.querySelector("#lblMessageErreur").innerHTML="tout les champ ayant des étoiles sont obligatoire ";
-     valide=false;
+     valideFormulaire=false;
  }
- return valide;
+ return valideFormulaire;
 }
 function validerChampsObligatoire()
 {

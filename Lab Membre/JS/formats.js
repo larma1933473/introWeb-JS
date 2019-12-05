@@ -71,11 +71,11 @@ function ValideTel(Chaine)
 }
 function ValidePoste(Chaine)
 {
-    return /^([A-z]\d[A-z] [A-z]\d[A-z]|^$)$/.test(Chainee);
+    return /^([A-z]\d[A-z] [A-z]\d[A-z])|(^$)$/.test(Chainee);
 }
 function ValideCodePerm(Chaine)
 {
-    return /^[A-z]{4}[0-9]{8}$/.test(Chaine);
+    return /^[A-z]{4}[0-9]{8}|(^$)$/.test(Chaine);
 }
 function ValideAdresse(Chaine)
 {
