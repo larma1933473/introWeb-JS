@@ -8,7 +8,7 @@ function valideFormat()
         document.getElementById("txtNom").style.borderColor = "red"
     }
     else
-        document.getElementById("txtNom").style.borderColor = "";
+        document.getElementById("txtNom").style.borderColor = "white";
 
     if(ValideNom(document.querySelector("#txtPrenom").value)==false)
     {
@@ -16,7 +16,7 @@ function valideFormat()
         document.getElementById("txtPrenom").style.borderColor = "red"
     }
     else
-        document.getElementById("txtPrenom").style.borderColor = "";
+        document.getElementById("txtPrenom").style.borderColor = "white";
 
     if(ValideAdresse(document.querySelector("#txtAdresse").value)==false)
     {
@@ -24,7 +24,7 @@ function valideFormat()
         document.getElementById("txtAdresse").style.borderColor = "red"
     }
     else
-        document.getElementById("txtAdresse").style.borderColor = "";
+        document.getElementById("txtAdresse").style.borderColor = "white";
 
     if(ValideNom(document.querySelector("#txtVille").value)==false)
     {
@@ -32,7 +32,7 @@ function valideFormat()
         document.getElementById("txtVille").style.borderColor = "red"
     }
     else
-        document.getElementById("txtVille").style.borderColor = "";
+        document.getElementById("txtVille").style.borderColor = "white";
 
     if(ValideTel(document.querySelector("#txtTel").value)==false)
     {
@@ -40,7 +40,7 @@ function valideFormat()
         document.getElementById("txtTel").style.borderColor = "red"
     }
     else
-        document.getElementById("txtTel").style.borderColor = "";
+        document.getElementById("txtTel").style.borderColor = "white";
 
     if(ValidePoste(document.querySelector("#txtCodePostal").value)==false)
     {
@@ -48,7 +48,7 @@ function valideFormat()
         document.getElementById("txtCodePostal").style.borderColor = "red"
     }
     else
-        document.getElementById("txtCodePostal").style.borderColor = "";
+        document.getElementById("txtCodePostal").style.borderColor = "white";
 
     if(ValideCodePerm(document.querySelector("#txtCodePerm").value)==false)
     {
@@ -56,7 +56,7 @@ function valideFormat()
         document.getElementById("txtCodePerm").style.borderColor = "red"
     }
     else
-        document.getElementById("txtCodePerm").style.borderColor = "";
+        document.getElementById("txtCodePerm").style.borderColor = "white";
 
 
     return valide;

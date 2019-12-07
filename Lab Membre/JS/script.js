@@ -1,6 +1,6 @@
 function frmMembre_onsubmit()
 {
-    var prixPersonne;
+    var prixPersonne=0;
     var valideFormulaire=true;
     var confirmation=confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ");
 
