@@ -8,11 +8,11 @@ function frmMembre_onsubmit()
  {
      prixPersonne= traitePrix();
 
-     var confirmation=confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ");
-
-     if(valideFormat()==true)
+     if(valideFormat()===true)
      {
-          if(confirmation==false)
+         var confirmation=confirm('le prix total est de ' +prixPersonne+'$ voulez-vous continuez ? ');
+
+          if(confirmation===false)
           {
                 valideFormulaire=false;
           }

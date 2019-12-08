@@ -71,7 +71,7 @@ function ValideTel(Chaine)
 }
 function ValidePoste(Chaine)
 {
-    return /^([A-z]\d[A-z] [A-z]\d[A-z])|(^$)$/.test(Chainee);
+    return /^([A-z]\d[A-z] [A-z]\d[A-z])|(^$)$/.test(Chaine);
 }
 function ValideCodePerm(Chaine)
 {
