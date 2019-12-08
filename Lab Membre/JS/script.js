@@ -2,20 +2,26 @@ function frmMembre_onsubmit()
 {
     var prixPersonne=0;
     var valideFormulaire=true;
-    var confirmation=confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ");
+
 
  if(validerChampsObligatoire()==true)
  {
-     prixPersonne= traiterPrix();
+     prixPersonne= traitePrix();
+
+     var confirmation=confirm("le prix total est de "+prixPersonne+"$ voulez-vous continuez ? ");
 
      if(valideFormat()==true)
      {
-
-      if(confirmation==false)
-      {
-            valideFormulaire=false;
-      }
+          if(confirmation==false)
+          {
+                valideFormulaire=false;
+          }
      }
+     else
+     {
+         valideFormulaire=false;
+     }
+
  }
  else
  {
